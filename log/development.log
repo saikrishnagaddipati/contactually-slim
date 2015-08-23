@@ -828,3 +828,1964 @@ ActionController::ParameterMissing (param is missing or the value is empty: cont
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.0ms)
 Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x46496b8 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x4649538 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x4643688 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-23 11:56:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (0.0ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 960ms (Views: 922.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-321ead9e1ad2a1ec1b318c558e94d7e5ede713a2bfc6caf3ddbe025f60f28125.css?body=1" for 127.0.0.1 at 2015-08-23 11:56:31 -0400
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 11:56:47 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+T/IXx34ORmueaHCvQMO8Bnfl7M9uuM6dpmWcScj0pE1+dJUy8/7awn28gnGy+vvIvTi8A9yR0M/N5T5kKXDg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x67a5ab8 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-9440-126jb8f.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant Roo::Csv):
+  app/models/contact.rb:18:in `open_spreadsheet'
+  app/models/contact.rb:6:in `import'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42d0dd0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42d0c20 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42b6478 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 11:57:55 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+T/IXx34ORmueaHCvQMO8Bnfl7M9uuM6dpmWcScj0pE1+dJUy8/7awn28gnGy+vvIvTi8A9yR0M/N5T5kKXDg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x9667e18 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-9440-1ov4ehs.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 3.0ms)
+
+NameError (undefined local variable or method `accessible_attributes' for #<Class:0x8649f60>):
+  app/models/contact.rb:11:in `block in import'
+  app/models/contact.rb:8:in `import'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42d0dd0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42d0c20 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42b6478 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 11:58:53 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+T/IXx34ORmueaHCvQMO8Bnfl7M9uuM6dpmWcScj0pE1+dJUy8/7awn28gnGy+vvIvTi8A9yR0M/N5T5kKXDg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x8925618 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-9440-1uujdp2.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x8937a98>):
+  app/models/contact.rb:3:in `<class:Contact>'
+  app/models/contact.rb:2:in `<top (required)>'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42d0dd0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42d0c20 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42b6478 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:05:31 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+T/IXx34ORmueaHCvQMO8Bnfl7M9uuM6dpmWcScj0pE1+dJUy8/7awn28gnGy+vvIvTi8A9yR0M/N5T5kKXDg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x87664f8 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-9440-waa854.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+  [1m[35mContact Load (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.0ms)
+
+NameError (undefined local variable or method `accessible_attributes' for #<Class:0x873c120>):
+  app/models/contact.rb:11:in `block in import'
+  app/models/contact.rb:8:in `import'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42d0dd0 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42d0c20 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42b6478 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:07:08 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+T/IXx34ORmueaHCvQMO8Bnfl7M9uuM6dpmWcScj0pE1+dJUy8/7awn28gnGy+vvIvTi8A9yR0M/N5T5kKXDg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x62cd990 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-9440-1ddwbb4.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:08.311954"], ["updated_at", "2015-08-23 16:07:08.311954"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:08.462963"], ["updated_at", "2015-08-23 16:07:08.462963"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:08.561969"], ["updated_at", "2015-08-23 16:07:08.561969"]]
+  [1m[35m (319.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:08.894988"], ["updated_at", "2015-08-23 16:07:08.894988"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.005994"], ["updated_at", "2015-08-23 16:07:09.005994"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.117000"], ["updated_at", "2015-08-23 16:07:09.117000"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.228007"], ["updated_at", "2015-08-23 16:07:09.228007"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.327012"], ["updated_at", "2015-08-23 16:07:09.327012"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.440019"], ["updated_at", "2015-08-23 16:07:09.440019"]]
+  [1m[35m (87.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.537024"], ["updated_at", "2015-08-23 16:07:09.537024"]]
+  [1m[35m (159.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:09.703034"], ["updated_at", "2015-08-23 16:07:09.703034"]]
+  [1m[35m (326.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.038053"], ["updated_at", "2015-08-23 16:07:10.038053"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.138059"], ["updated_at", "2015-08-23 16:07:10.138059"]]
+  [1m[35m (137.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.285067"], ["updated_at", "2015-08-23 16:07:10.285067"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.395074"], ["updated_at", "2015-08-23 16:07:10.395074"]]
+  [1m[35m (143.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.549082"], ["updated_at", "2015-08-23 16:07:10.549082"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.661089"], ["updated_at", "2015-08-23 16:07:10.661089"]]
+  [1m[35m (268.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:10.939105"], ["updated_at", "2015-08-23 16:07:10.939105"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.039110"], ["updated_at", "2015-08-23 16:07:11.039110"]]
+  [1m[35m (105.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.160117"], ["updated_at", "2015-08-23 16:07:11.160117"]]
+  [1m[35m (146.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.317126"], ["updated_at", "2015-08-23 16:07:11.317126"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.416132"], ["updated_at", "2015-08-23 16:07:11.416132"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.516138"], ["updated_at", "2015-08-23 16:07:11.516138"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.617143"], ["updated_at", "2015-08-23 16:07:11.617143"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.717149"], ["updated_at", "2015-08-23 16:07:11.717149"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.817155"], ["updated_at", "2015-08-23 16:07:11.817155"]]
+  [1m[35m (79.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.907160"], ["updated_at", "2015-08-23 16:07:11.907160"]]
+  [1m[35m (77.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:11.995165"], ["updated_at", "2015-08-23 16:07:11.995165"]]
+  [1m[35m (76.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.082170"], ["updated_at", "2015-08-23 16:07:12.082170"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.188176"], ["updated_at", "2015-08-23 16:07:12.188176"]]
+  [1m[35m (118.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.317183"], ["updated_at", "2015-08-23 16:07:12.317183"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.418189"], ["updated_at", "2015-08-23 16:07:12.418189"]]
+  [1m[35m (87.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.517195"], ["updated_at", "2015-08-23 16:07:12.517195"]]
+  [1m[35m (82.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.611200"], ["updated_at", "2015-08-23 16:07:12.611200"]]
+  [1m[35m (181.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.807212"], ["updated_at", "2015-08-23 16:07:12.807212"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:12.906217"], ["updated_at", "2015-08-23 16:07:12.906217"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.006223"], ["updated_at", "2015-08-23 16:07:13.006223"]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.114229"], ["updated_at", "2015-08-23 16:07:13.114229"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.228236"], ["updated_at", "2015-08-23 16:07:13.228236"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.339242"], ["updated_at", "2015-08-23 16:07:13.339242"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.450248"], ["updated_at", "2015-08-23 16:07:13.450248"]]
+  [1m[35m (165.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.627258"], ["updated_at", "2015-08-23 16:07:13.627258"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.744265"], ["updated_at", "2015-08-23 16:07:13.744265"]]
+  [1m[35m (117.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:13.871272"], ["updated_at", "2015-08-23 16:07:13.871272"]]
+  [1m[35m (126.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:14.007280"], ["updated_at", "2015-08-23 16:07:14.007280"]]
+  [1m[35m (148.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:14.165289"], ["updated_at", "2015-08-23 16:07:14.165289"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:14.296297"], ["updated_at", "2015-08-23 16:07:14.296297"]]
+  [1m[35m (245.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:14.551311"], ["updated_at", "2015-08-23 16:07:14.551311"]]
+  [1m[35m (259.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:14.822327"], ["updated_at", "2015-08-23 16:07:14.822327"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:14.933333"], ["updated_at", "2015-08-23 16:07:14.933333"]]
+  [1m[35m (155.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.098343"], ["updated_at", "2015-08-23 16:07:15.098343"]]
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.210349"], ["updated_at", "2015-08-23 16:07:15.210349"]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.366358"], ["updated_at", "2015-08-23 16:07:15.366358"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.466364"], ["updated_at", "2015-08-23 16:07:15.466364"]]
+  [1m[35m (144.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.626373"], ["updated_at", "2015-08-23 16:07:15.626373"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.733379"], ["updated_at", "2015-08-23 16:07:15.733379"]]
+  [1m[35m (143.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:15.888388"], ["updated_at", "2015-08-23 16:07:15.888388"]]
+  [1m[35m (133.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:16.034396"], ["updated_at", "2015-08-23 16:07:16.034396"]]
+  [1m[35m (154.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:16.198405"], ["updated_at", "2015-08-23 16:07:16.198405"]]
+  [1m[35m (137.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:16.345414"], ["updated_at", "2015-08-23 16:07:16.345414"]]
+  [1m[35m (164.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:16.522424"], ["updated_at", "2015-08-23 16:07:16.522424"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:16.644431"], ["updated_at", "2015-08-23 16:07:16.644431"]]
+  [1m[35m (290.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:16.945448"], ["updated_at", "2015-08-23 16:07:16.945448"]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.055455"], ["updated_at", "2015-08-23 16:07:17.055455"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.185462"], ["updated_at", "2015-08-23 16:07:17.185462"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.288468"], ["updated_at", "2015-08-23 16:07:17.288468"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.388474"], ["updated_at", "2015-08-23 16:07:17.388474"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.500480"], ["updated_at", "2015-08-23 16:07:17.500480"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.615487"], ["updated_at", "2015-08-23 16:07:17.615487"]]
+  [1m[35m (105.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.734493"], ["updated_at", "2015-08-23 16:07:17.734493"]]
+  [1m[35m (176.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:17.922504"], ["updated_at", "2015-08-23 16:07:17.922504"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.044511"], ["updated_at", "2015-08-23 16:07:18.044511"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (3.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.147517"], ["updated_at", "2015-08-23 16:07:18.147517"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.256523"], ["updated_at", "2015-08-23 16:07:18.256523"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.389531"], ["updated_at", "2015-08-23 16:07:18.389531"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.501537"], ["updated_at", "2015-08-23 16:07:18.501537"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.611544"], ["updated_at", "2015-08-23 16:07:18.611544"]]
+  [1m[35m (122.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.758552"], ["updated_at", "2015-08-23 16:07:18.758552"]]
+  [1m[35m (187.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:18.956563"], ["updated_at", "2015-08-23 16:07:18.956563"]]
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.088571"], ["updated_at", "2015-08-23 16:07:19.088571"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.201577"], ["updated_at", "2015-08-23 16:07:19.201577"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.332585"], ["updated_at", "2015-08-23 16:07:19.332585"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.455592"], ["updated_at", "2015-08-23 16:07:19.455592"]]
+  [1m[35m (122.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.588599"], ["updated_at", "2015-08-23 16:07:19.588599"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.710606"], ["updated_at", "2015-08-23 16:07:19.710606"]]
+  [1m[35m (158.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:19.878616"], ["updated_at", "2015-08-23 16:07:19.878616"]]
+  [1m[35m (232.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:20.123630"], ["updated_at", "2015-08-23 16:07:20.123630"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:20.243637"], ["updated_at", "2015-08-23 16:07:20.243637"]]
+  [1m[35m (192.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:20.445648"], ["updated_at", "2015-08-23 16:07:20.445648"]]
+  [1m[35m (120.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:20.578656"], ["updated_at", "2015-08-23 16:07:20.578656"]]
+  [1m[35m (187.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:20.777667"], ["updated_at", "2015-08-23 16:07:20.777667"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:20.900674"], ["updated_at", "2015-08-23 16:07:20.900674"]]
+  [1m[35m (260.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:21.172690"], ["updated_at", "2015-08-23 16:07:21.172690"]]
+  [1m[35m (261.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:21.444706"], ["updated_at", "2015-08-23 16:07:21.444706"]]
+  [1m[35m (277.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:21.738722"], ["updated_at", "2015-08-23 16:07:21.738722"]]
+  [1m[35m (130.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:21.877730"], ["updated_at", "2015-08-23 16:07:21.877730"]]
+  [1m[35m (255.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:22.144746"], ["updated_at", "2015-08-23 16:07:22.144746"]]
+  [1m[35m (244.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:22.400760"], ["updated_at", "2015-08-23 16:07:22.400760"]]
+  [1m[35m (189.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:22.601772"], ["updated_at", "2015-08-23 16:07:22.601772"]]
+  [1m[35m (264.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:22.877788"], ["updated_at", "2015-08-23 16:07:22.877788"]]
+  [1m[35m (244.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:23.133802"], ["updated_at", "2015-08-23 16:07:23.133802"]]
+  [1m[35m (199.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:23.344814"], ["updated_at", "2015-08-23 16:07:23.344814"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:23.466821"], ["updated_at", "2015-08-23 16:07:23.466821"]]
+  [1m[35m (244.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:23.722836"], ["updated_at", "2015-08-23 16:07:23.722836"]]
+  [1m[35m (195.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:23.934848"], ["updated_at", "2015-08-23 16:07:23.934848"]]
+  [1m[35m (210.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:24.157861"], ["updated_at", "2015-08-23 16:07:24.157861"]]
+  [1m[35m (249.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:24.418876"], ["updated_at", "2015-08-23 16:07:24.418876"]]
+  [1m[35m (194.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:24.621887"], ["updated_at", "2015-08-23 16:07:24.621887"]]
+  [1m[35m (435.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:25.064913"], ["updated_at", "2015-08-23 16:07:25.064913"]]
+  [1m[35m (203.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:25.274925"], ["updated_at", "2015-08-23 16:07:25.274925"]]
+  [1m[35m (194.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:25.478936"], ["updated_at", "2015-08-23 16:07:25.478936"]]
+  [1m[35m (196.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:25.686948"], ["updated_at", "2015-08-23 16:07:25.686948"]]
+  [1m[35m (233.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:25.931962"], ["updated_at", "2015-08-23 16:07:25.931962"]]
+  [1m[35m (190.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:26.133974"], ["updated_at", "2015-08-23 16:07:26.133974"]]
+  [1m[35m (209.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:26.353986"], ["updated_at", "2015-08-23 16:07:26.353986"]]
+  [1m[35m (225.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:26.588000"], ["updated_at", "2015-08-23 16:07:26.588000"]]
+  [1m[35m (176.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:26.782011"], ["updated_at", "2015-08-23 16:07:26.782011"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:26.900018"], ["updated_at", "2015-08-23 16:07:26.900018"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.033025"], ["updated_at", "2015-08-23 16:07:27.033025"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.155032"], ["updated_at", "2015-08-23 16:07:27.155032"]]
+  [1m[35m (124.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.288040"], ["updated_at", "2015-08-23 16:07:27.288040"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.410047"], ["updated_at", "2015-08-23 16:07:27.410047"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.545054"], ["updated_at", "2015-08-23 16:07:27.545054"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.655061"], ["updated_at", "2015-08-23 16:07:27.655061"]]
+  [1m[35m (105.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.771067"], ["updated_at", "2015-08-23 16:07:27.771067"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:27.911075"], ["updated_at", "2015-08-23 16:07:27.911075"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.022082"], ["updated_at", "2015-08-23 16:07:28.022082"]]
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.149089"], ["updated_at", "2015-08-23 16:07:28.149089"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.270096"], ["updated_at", "2015-08-23 16:07:28.270096"]]
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.456107"], ["updated_at", "2015-08-23 16:07:28.456107"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.577114"], ["updated_at", "2015-08-23 16:07:28.577114"]]
+  [1m[35m (218.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.803126"], ["updated_at", "2015-08-23 16:07:28.803126"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:28.922133"], ["updated_at", "2015-08-23 16:07:28.922133"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.055141"], ["updated_at", "2015-08-23 16:07:29.055141"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.177148"], ["updated_at", "2015-08-23 16:07:29.177148"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.311155"], ["updated_at", "2015-08-23 16:07:29.311155"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.433162"], ["updated_at", "2015-08-23 16:07:29.433162"]]
+  [1m[35m (121.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.567170"], ["updated_at", "2015-08-23 16:07:29.567170"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.688177"], ["updated_at", "2015-08-23 16:07:29.688177"]]
+  [1m[35m (188.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.886188"], ["updated_at", "2015-08-23 16:07:29.886188"]]
+  [1m[35m (92.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:29.988194"], ["updated_at", "2015-08-23 16:07:29.988194"]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.099201"], ["updated_at", "2015-08-23 16:07:30.099201"]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.211207"], ["updated_at", "2015-08-23 16:07:30.211207"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.330214"], ["updated_at", "2015-08-23 16:07:30.330214"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.466222"], ["updated_at", "2015-08-23 16:07:30.466222"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.579228"], ["updated_at", "2015-08-23 16:07:30.579228"]]
+  [1m[35m (148.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.739237"], ["updated_at", "2015-08-23 16:07:30.739237"]]
+  [1m[35m (192.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:30.945249"], ["updated_at", "2015-08-23 16:07:30.945249"]]
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.054255"], ["updated_at", "2015-08-23 16:07:31.054255"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.158261"], ["updated_at", "2015-08-23 16:07:31.158261"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.266267"], ["updated_at", "2015-08-23 16:07:31.266267"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.364273"], ["updated_at", "2015-08-23 16:07:31.364273"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.466279"], ["updated_at", "2015-08-23 16:07:31.466279"]]
+  [1m[35m (88.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.566284"], ["updated_at", "2015-08-23 16:07:31.566284"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.666290"], ["updated_at", "2015-08-23 16:07:31.666290"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.778297"], ["updated_at", "2015-08-23 16:07:31.778297"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:31.876302"], ["updated_at", "2015-08-23 16:07:31.876302"]]
+  [1m[35m (186.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.078314"], ["updated_at", "2015-08-23 16:07:32.078314"]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.188320"], ["updated_at", "2015-08-23 16:07:32.188320"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.310327"], ["updated_at", "2015-08-23 16:07:32.310327"]]
+  [1m[35m (156.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.478337"], ["updated_at", "2015-08-23 16:07:32.478337"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.589343"], ["updated_at", "2015-08-23 16:07:32.589343"]]
+  [1m[35m (146.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.746352"], ["updated_at", "2015-08-23 16:07:32.746352"]]
+  [1m[35m (108.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.867359"], ["updated_at", "2015-08-23 16:07:32.867359"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:32.966365"], ["updated_at", "2015-08-23 16:07:32.966365"]]
+  [1m[35m (168.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.146375"], ["updated_at", "2015-08-23 16:07:33.146375"]]
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.255381"], ["updated_at", "2015-08-23 16:07:33.255381"]]
+  [1m[35m (119.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.386389"], ["updated_at", "2015-08-23 16:07:33.386389"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.487394"], ["updated_at", "2015-08-23 16:07:33.487394"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.588400"], ["updated_at", "2015-08-23 16:07:33.588400"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.688406"], ["updated_at", "2015-08-23 16:07:33.688406"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.791412"], ["updated_at", "2015-08-23 16:07:33.791412"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:33.886417"], ["updated_at", "2015-08-23 16:07:33.886417"]]
+  [1m[35m (170.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:34.067428"], ["updated_at", "2015-08-23 16:07:34.067428"]]
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:34.189435"], ["updated_at", "2015-08-23 16:07:34.189435"]]
+  [1m[35m (188.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:34.387446"], ["updated_at", "2015-08-23 16:07:34.387446"]]
+  [1m[35m (222.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:34.622459"], ["updated_at", "2015-08-23 16:07:34.622459"]]
+  [1m[35m (310.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:34.941478"], ["updated_at", "2015-08-23 16:07:34.941478"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:35.044483"], ["updated_at", "2015-08-23 16:07:35.044483"]]
+  [1m[35m (200.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:35.258496"], ["updated_at", "2015-08-23 16:07:35.258496"]]
+  [1m[35m (186.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:35.453507"], ["updated_at", "2015-08-23 16:07:35.453507"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:35.563513"], ["updated_at", "2015-08-23 16:07:35.563513"]]
+  [1m[35m (218.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:35.794526"], ["updated_at", "2015-08-23 16:07:35.794526"]]
+  [1m[35m (193.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:35.999538"], ["updated_at", "2015-08-23 16:07:35.999538"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:36.099544"], ["updated_at", "2015-08-23 16:07:36.099544"]]
+  [1m[35m (199.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:36.310556"], ["updated_at", "2015-08-23 16:07:36.310556"]]
+  [1m[35m (224.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:36.544569"], ["updated_at", "2015-08-23 16:07:36.544569"]]
+  [1m[35m (251.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:36.807584"], ["updated_at", "2015-08-23 16:07:36.807584"]]
+  [1m[35m (214.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:37.037597"], ["updated_at", "2015-08-23 16:07:37.037597"]]
+  [1m[35m (186.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:37.233609"], ["updated_at", "2015-08-23 16:07:37.233609"]]
+  [1m[35m (209.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:37.462622"], ["updated_at", "2015-08-23 16:07:37.462622"]]
+  [1m[35m (182.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:37.655633"], ["updated_at", "2015-08-23 16:07:37.655633"]]
+  [1m[35m (189.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:37.856644"], ["updated_at", "2015-08-23 16:07:37.856644"]]
+  [1m[35m (277.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:38.144661"], ["updated_at", "2015-08-23 16:07:38.144661"]]
+  [1m[35m (333.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:38.487680"], ["updated_at", "2015-08-23 16:07:38.487680"]]
+  [1m[35m (380.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:38.878703"], ["updated_at", "2015-08-23 16:07:38.878703"]]
+  [1m[35m (233.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:39.122717"], ["updated_at", "2015-08-23 16:07:39.122717"]]
+  [1m[35m (199.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:39.333729"], ["updated_at", "2015-08-23 16:07:39.333729"]]
+  [1m[35m (211.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:39.554741"], ["updated_at", "2015-08-23 16:07:39.554741"]]
+  [1m[35m (291.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:07:39.855759"], ["updated_at", "2015-08-23 16:07:39.855759"]]
+  [1m[35m (187.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 31805ms (ActiveRecord: 29719.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (2.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (95.0ms)
+Completed 200 OK in 174ms (Views: 171.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/scaffolds.self-321ead9e1ad2a1ec1b318c558e94d7e5ede713a2bfc6caf3ddbe025f60f28125.css?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-23 12:07:40 -0400
+
+
+Started GET "/contacts/2" for 127.0.0.1 at 2015-08-23 12:08:06 -0400
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mContact Load (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered contacts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 77ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2015-08-23 12:08:08 -0400
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 167ms (Views: 167.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (112.2ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email_address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (88.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (146.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (1.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (117.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150822142955')
+  [1m[36m (108.0ms)[0m  [1mCREATE TABLE "contacts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "email_address" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (93.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (99.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (98.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150822142955')
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2015-08-23 12:14:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.0ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 457ms (Views: 431.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffolds.self-321ead9e1ad2a1ec1b318c558e94d7e5ede713a2bfc6caf3ddbe025f60f28125.css?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-23 12:14:45 -0400
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:14:53 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0figsgrgn/Cmx+dtxacCvBV4CMQPz8bTXt2ItcU7ZAQ+y7jaJbhA+WxZ2iLoSCEoaZSlEQME5EK7+zC/5+V8QA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x8d6b418 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-6172-zpxuc2.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'First Name	Last Name	Email Address	Phone Number	Company Name' for Contact.):
+  app/models/contact.rb:11:in `block in import'
+  app/models/contact.rb:8:in `import'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42bff88 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42bfdf0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42bcfe8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:18:42 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0figsgrgn/Cmx+dtxacCvBV4CMQPz8bTXt2ItcU7ZAQ+y7jaJbhA+WxZ2iLoSCEoaZSlEQME5EK7+zC/5+V8QA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x94d6f40 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-6172-1k1oacj.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+  [1m[35mContact Load (1.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'First Name	Last Name	Email Address	Phone Number	Company Name' for Contact.):
+  app/models/contact.rb:11:in `block in import'
+  app/models/contact.rb:8:in `import'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42bff88 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42bfdf0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42bcfe8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:21:58 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0figsgrgn/Cmx+dtxacCvBV4CMQPz8bTXt2ItcU7ZAQ+y7jaJbhA+WxZ2iLoSCEoaZSlEQME5EK7+zC/5+V8QA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x9f300d8 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-6172-1nt31su.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x9f222a8>):
+  app/models/contact.rb:3:in `<class:Contact>'
+  app/models/contact.rb:2:in `<top (required)>'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42bff88 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42bfdf0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42bcfe8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:22:44 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0figsgrgn/Cmx+dtxacCvBV4CMQPz8bTXt2ItcU7ZAQ+y7jaJbhA+WxZ2iLoSCEoaZSlEQME5EK7+zC/5+V8QA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x89dd170 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-6172-tx8sy9.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms)
+
+NoMethodError (undefined method `attr_accessible' for #<Class:0x87fe538>):
+  app/models/contact.rb:3:in `<class:Contact>'
+  app/models/contact.rb:2:in `<top (required)>'
+  app/controllers/contacts_controller.rb:5:in `import'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x42bff88 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x42bfdf0 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x42bcfe8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/contacts/import" for 127.0.0.1 at 2015-08-23 12:23:02 -0400
+Processing by ContactsController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0figsgrgn/Cmx+dtxacCvBV4CMQPz8bTXt2ItcU7ZAQ+y7jaJbhA+WxZ2iLoSCEoaZSlEQME5EK7+zC/5+V8QA==", "file"=>#<ActionDispatch::Http::UploadedFile:0x8e29828 @tempfile=#<Tempfile:C:/Users/JOHND~1/AppData/Local/Temp/RackMultipart20150823-6172-146m3js.csv>, @original_filename="data.csv", @content_type="application/octet-stream", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"data.csv\"\r\nContent-Type: application/octet-stream\r\n">, "commit"=>"Import"}
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:02.507884"], ["updated_at", "2015-08-23 16:23:02.507884"]]
+  [1m[35m (120.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:02.642892"], ["updated_at", "2015-08-23 16:23:02.642892"]]
+  [1m[35m (247.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:02.899906"], ["updated_at", "2015-08-23 16:23:02.899906"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.008913"], ["updated_at", "2015-08-23 16:23:03.008913"]]
+  [1m[35m (79.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.097918"], ["updated_at", "2015-08-23 16:23:03.097918"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.208924"], ["updated_at", "2015-08-23 16:23:03.208924"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.319930"], ["updated_at", "2015-08-23 16:23:03.319930"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.431937"], ["updated_at", "2015-08-23 16:23:03.431937"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.530943"], ["updated_at", "2015-08-23 16:23:03.530943"]]
+  [1m[35m (80.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.620948"], ["updated_at", "2015-08-23 16:23:03.620948"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.735954"], ["updated_at", "2015-08-23 16:23:03.735954"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.853961"], ["updated_at", "2015-08-23 16:23:03.853961"]]
+  [1m[35m (80.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:03.943966"], ["updated_at", "2015-08-23 16:23:03.943966"]]
+  [1m[35m (66.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.019970"], ["updated_at", "2015-08-23 16:23:04.019970"]]
+  [1m[35m (80.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.109976"], ["updated_at", "2015-08-23 16:23:04.109976"]]
+  [1m[35m (83.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.201981"], ["updated_at", "2015-08-23 16:23:04.201981"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.300987"], ["updated_at", "2015-08-23 16:23:04.300987"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.409993"], ["updated_at", "2015-08-23 16:23:04.409993"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.509999"], ["updated_at", "2015-08-23 16:23:04.509999"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.620005"], ["updated_at", "2015-08-23 16:23:04.620005"]]
+  [1m[35m (134.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.763013"], ["updated_at", "2015-08-23 16:23:04.763013"]]
+  [1m[35m (138.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:04.910021"], ["updated_at", "2015-08-23 16:23:04.910021"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.009027"], ["updated_at", "2015-08-23 16:23:05.009027"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.111033"], ["updated_at", "2015-08-23 16:23:05.111033"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.219039"], ["updated_at", "2015-08-23 16:23:05.219039"]]
+  [1m[35m (108.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.336046"], ["updated_at", "2015-08-23 16:23:05.336046"]]
+  [1m[35m (86.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.432051"], ["updated_at", "2015-08-23 16:23:05.432051"]]
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.534057"], ["updated_at", "2015-08-23 16:23:05.534057"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.643063"], ["updated_at", "2015-08-23 16:23:05.643063"]]
+  [1m[35m (99.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.751069"], ["updated_at", "2015-08-23 16:23:05.751069"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.854075"], ["updated_at", "2015-08-23 16:23:05.854075"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:05.955081"], ["updated_at", "2015-08-23 16:23:05.955081"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.054087"], ["updated_at", "2015-08-23 16:23:06.054087"]]
+  [1m[35m (139.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.201095"], ["updated_at", "2015-08-23 16:23:06.201095"]]
+  [1m[35m (220.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.431108"], ["updated_at", "2015-08-23 16:23:06.431108"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.553115"], ["updated_at", "2015-08-23 16:23:06.553115"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.664122"], ["updated_at", "2015-08-23 16:23:06.664122"]]
+  [1m[35m (146.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.818131"], ["updated_at", "2015-08-23 16:23:06.818131"]]
+  [1m[35m (137.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:06.965139"], ["updated_at", "2015-08-23 16:23:06.965139"]]
+  [1m[35m (78.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.052144"], ["updated_at", "2015-08-23 16:23:07.052144"]]
+  [1m[35m (92.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.154150"], ["updated_at", "2015-08-23 16:23:07.154150"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.263156"], ["updated_at", "2015-08-23 16:23:07.263156"]]
+  [1m[35m (106.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.376162"], ["updated_at", "2015-08-23 16:23:07.376162"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.476168"], ["updated_at", "2015-08-23 16:23:07.476168"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.577174"], ["updated_at", "2015-08-23 16:23:07.577174"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.676180"], ["updated_at", "2015-08-23 16:23:07.676180"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.797187"], ["updated_at", "2015-08-23 16:23:07.797187"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:07.910193"], ["updated_at", "2015-08-23 16:23:07.910193"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.030200"], ["updated_at", "2015-08-23 16:23:08.030200"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.165208"], ["updated_at", "2015-08-23 16:23:08.165208"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.275214"], ["updated_at", "2015-08-23 16:23:08.275214"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.383220"], ["updated_at", "2015-08-23 16:23:08.383220"]]
+  [1m[35m (83.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.477225"], ["updated_at", "2015-08-23 16:23:08.477225"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.600232"], ["updated_at", "2015-08-23 16:23:08.600232"]]
+  [1m[35m (133.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.743241"], ["updated_at", "2015-08-23 16:23:08.743241"]]
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:08.865248"], ["updated_at", "2015-08-23 16:23:08.865248"]]
+  [1m[35m (134.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.010256"], ["updated_at", "2015-08-23 16:23:09.010256"]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.147264"], ["updated_at", "2015-08-23 16:23:09.147264"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.271271"], ["updated_at", "2015-08-23 16:23:09.271271"]]
+  [1m[35m (176.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.455281"], ["updated_at", "2015-08-23 16:23:09.455281"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.632291"], ["updated_at", "2015-08-23 16:23:09.632291"]]
+  [1m[35m (92.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.736297"], ["updated_at", "2015-08-23 16:23:09.736297"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.845304"], ["updated_at", "2015-08-23 16:23:09.845304"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:09.944309"], ["updated_at", "2015-08-23 16:23:09.944309"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:10.044315"], ["updated_at", "2015-08-23 16:23:10.044315"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:10.155321"], ["updated_at", "2015-08-23 16:23:10.155321"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:10.263328"], ["updated_at", "2015-08-23 16:23:10.263328"]]
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:10.388335"], ["updated_at", "2015-08-23 16:23:10.388335"]]
+  [1m[35m (212.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:10.607347"], ["updated_at", "2015-08-23 16:23:10.607347"]]
+  [1m[35m (475.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:11.097375"], ["updated_at", "2015-08-23 16:23:11.097375"]]
+  [1m[35m (344.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:11.454396"], ["updated_at", "2015-08-23 16:23:11.454396"]]
+  [1m[35m (203.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:11.666408"], ["updated_at", "2015-08-23 16:23:11.666408"]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:11.797415"], ["updated_at", "2015-08-23 16:23:11.797415"]]
+  [1m[35m (148.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:11.954424"], ["updated_at", "2015-08-23 16:23:11.954424"]]
+  [1m[35m (124.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.087432"], ["updated_at", "2015-08-23 16:23:12.087432"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.221440"], ["updated_at", "2015-08-23 16:23:12.221440"]]
+  [1m[35m (134.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.364448"], ["updated_at", "2015-08-23 16:23:12.364448"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.477454"], ["updated_at", "2015-08-23 16:23:12.477454"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.598461"], ["updated_at", "2015-08-23 16:23:12.598461"]]
+  [1m[35m (268.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.876477"], ["updated_at", "2015-08-23 16:23:12.876477"]]
+  [1m[35m (115.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:12.999484"], ["updated_at", "2015-08-23 16:23:12.999484"]]
+  [1m[35m (167.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:13.177494"], ["updated_at", "2015-08-23 16:23:13.177494"]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:13.309502"], ["updated_at", "2015-08-23 16:23:13.309502"]]
+  [1m[35m (136.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:13.454510"], ["updated_at", "2015-08-23 16:23:13.454510"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:13.565516"], ["updated_at", "2015-08-23 16:23:13.565516"]]
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:13.689524"], ["updated_at", "2015-08-23 16:23:13.689524"]]
+  [1m[35m (199.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:13.898536"], ["updated_at", "2015-08-23 16:23:13.898536"]]
+  [1m[35m (126.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:14.032543"], ["updated_at", "2015-08-23 16:23:14.032543"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:14.143550"], ["updated_at", "2015-08-23 16:23:14.143550"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:14.255556"], ["updated_at", "2015-08-23 16:23:14.255556"]]
+  [1m[35m (202.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:14.466568"], ["updated_at", "2015-08-23 16:23:14.466568"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:14.565574"], ["updated_at", "2015-08-23 16:23:14.565574"]]
+  [1m[35m (457.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:15.034600"], ["updated_at", "2015-08-23 16:23:15.034600"]]
+  [1m[35m (257.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:15.303616"], ["updated_at", "2015-08-23 16:23:15.303616"]]
+  [1m[35m (199.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:15.514628"], ["updated_at", "2015-08-23 16:23:15.514628"]]
+  [1m[35m (133.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:15.655636"], ["updated_at", "2015-08-23 16:23:15.655636"]]
+  [1m[35m (202.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:15.865648"], ["updated_at", "2015-08-23 16:23:15.865648"]]
+  [1m[35m (214.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:16.087661"], ["updated_at", "2015-08-23 16:23:16.087661"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:16.199667"], ["updated_at", "2015-08-23 16:23:16.199667"]]
+  [1m[35m (201.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:16.408679"], ["updated_at", "2015-08-23 16:23:16.408679"]]
+  [1m[35m (195.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:16.611691"], ["updated_at", "2015-08-23 16:23:16.611691"]]
+  [1m[35m (478.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.099719"], ["updated_at", "2015-08-23 16:23:17.099719"]]
+  [1m[35m (135.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.244727"], ["updated_at", "2015-08-23 16:23:17.244727"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.349733"], ["updated_at", "2015-08-23 16:23:17.349733"]]
+  [1m[35m (96.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.454739"], ["updated_at", "2015-08-23 16:23:17.454739"]]
+  [1m[35m (181.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.643750"], ["updated_at", "2015-08-23 16:23:17.643750"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.766757"], ["updated_at", "2015-08-23 16:23:17.766757"]]
+  [1m[35m (179.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:17.952767"], ["updated_at", "2015-08-23 16:23:17.952767"]]
+  [1m[35m (82.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:18.043773"], ["updated_at", "2015-08-23 16:23:18.043773"]]
+  [1m[35m (201.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:18.254785"], ["updated_at", "2015-08-23 16:23:18.254785"]]
+  [1m[35m (190.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:18.453796"], ["updated_at", "2015-08-23 16:23:18.453796"]]
+  [1m[35m (97.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:18.562802"], ["updated_at", "2015-08-23 16:23:18.562802"]]
+  [1m[35m (227.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:18.799816"], ["updated_at", "2015-08-23 16:23:18.799816"]]
+  [1m[35m (180.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:18.989827"], ["updated_at", "2015-08-23 16:23:18.989827"]]
+  [1m[35m (92.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:19.091833"], ["updated_at", "2015-08-23 16:23:19.091833"]]
+  [1m[35m (223.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:19.323846"], ["updated_at", "2015-08-23 16:23:19.323846"]]
+  [1m[35m (213.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:19.546859"], ["updated_at", "2015-08-23 16:23:19.546859"]]
+  [1m[35m (189.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:19.749870"], ["updated_at", "2015-08-23 16:23:19.749870"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:19.856876"], ["updated_at", "2015-08-23 16:23:19.856876"]]
+  [1m[35m (191.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.056888"], ["updated_at", "2015-08-23 16:23:20.056888"]]
+  [1m[35m (168.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.233898"], ["updated_at", "2015-08-23 16:23:20.233898"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.334904"], ["updated_at", "2015-08-23 16:23:20.334904"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.445910"], ["updated_at", "2015-08-23 16:23:20.445910"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.557916"], ["updated_at", "2015-08-23 16:23:20.557916"]]
+  [1m[35m (156.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.723926"], ["updated_at", "2015-08-23 16:23:20.723926"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.834932"], ["updated_at", "2015-08-23 16:23:20.834932"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:20.954939"], ["updated_at", "2015-08-23 16:23:20.954939"]]
+  [1m[35m (95.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.057945"], ["updated_at", "2015-08-23 16:23:21.057945"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.156951"], ["updated_at", "2015-08-23 16:23:21.156951"]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.312960"], ["updated_at", "2015-08-23 16:23:21.312960"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.432966"], ["updated_at", "2015-08-23 16:23:21.432966"]]
+  [1m[35m (116.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.556974"], ["updated_at", "2015-08-23 16:23:21.556974"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.668980"], ["updated_at", "2015-08-23 16:23:21.668980"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.789987"], ["updated_at", "2015-08-23 16:23:21.789987"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:21.901993"], ["updated_at", "2015-08-23 16:23:21.901993"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.000999"], ["updated_at", "2015-08-23 16:23:22.000999"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.102005"], ["updated_at", "2015-08-23 16:23:22.102005"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.212011"], ["updated_at", "2015-08-23 16:23:22.212011"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.312017"], ["updated_at", "2015-08-23 16:23:22.312017"]]
+  [1m[35m (92.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.412022"], ["updated_at", "2015-08-23 16:23:22.412022"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.534029"], ["updated_at", "2015-08-23 16:23:22.534029"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.636035"], ["updated_at", "2015-08-23 16:23:22.636035"]]
+  [1m[35m (268.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.912051"], ["updated_at", "2015-08-23 16:23:22.912051"]]
+  [1m[35m (81.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:22.999056"], ["updated_at", "2015-08-23 16:23:22.999056"]]
+  [1m[35m (94.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.102062"], ["updated_at", "2015-08-23 16:23:23.102062"]]
+  [1m[35m (113.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.223069"], ["updated_at", "2015-08-23 16:23:23.223069"]]
+  [1m[35m (145.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.381078"], ["updated_at", "2015-08-23 16:23:23.381078"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.500085"], ["updated_at", "2015-08-23 16:23:23.500085"]]
+  [1m[35m (93.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.602091"], ["updated_at", "2015-08-23 16:23:23.602091"]]
+  [1m[35m (91.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.702096"], ["updated_at", "2015-08-23 16:23:23.702096"]]
+  [1m[35m (190.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:23.902108"], ["updated_at", "2015-08-23 16:23:23.902108"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.022115"], ["updated_at", "2015-08-23 16:23:24.022115"]]
+  [1m[35m (94.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.124120"], ["updated_at", "2015-08-23 16:23:24.124120"]]
+  [1m[35m (92.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.224126"], ["updated_at", "2015-08-23 16:23:24.224126"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.335132"], ["updated_at", "2015-08-23 16:23:24.335132"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.446139"], ["updated_at", "2015-08-23 16:23:24.446139"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.557145"], ["updated_at", "2015-08-23 16:23:24.557145"]]
+  [1m[35m (205.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.771157"], ["updated_at", "2015-08-23 16:23:24.771157"]]
+  [1m[35m (176.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:24.956168"], ["updated_at", "2015-08-23 16:23:24.956168"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.069174"], ["updated_at", "2015-08-23 16:23:25.069174"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.181181"], ["updated_at", "2015-08-23 16:23:25.181181"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.291187"], ["updated_at", "2015-08-23 16:23:25.291187"]]
+  [1m[35m (124.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.424195"], ["updated_at", "2015-08-23 16:23:25.424195"]]
+  [1m[35m (90.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.521200"], ["updated_at", "2015-08-23 16:23:25.521200"]]
+  [1m[35m (117.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.646207"], ["updated_at", "2015-08-23 16:23:25.646207"]]
+  [1m[35m (114.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.770215"], ["updated_at", "2015-08-23 16:23:25.770215"]]
+  [1m[35m (89.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:25.868220"], ["updated_at", "2015-08-23 16:23:25.868220"]]
+  [1m[35m (193.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.067232"], ["updated_at", "2015-08-23 16:23:26.067232"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.180238"], ["updated_at", "2015-08-23 16:23:26.180238"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.302245"], ["updated_at", "2015-08-23 16:23:26.302245"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.413251"], ["updated_at", "2015-08-23 16:23:26.413251"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.523258"], ["updated_at", "2015-08-23 16:23:26.523258"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.635264"], ["updated_at", "2015-08-23 16:23:26.635264"]]
+  [1m[35m (124.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.769272"], ["updated_at", "2015-08-23 16:23:26.769272"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.880278"], ["updated_at", "2015-08-23 16:23:26.880278"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:26.990284"], ["updated_at", "2015-08-23 16:23:26.990284"]]
+  [1m[35m (191.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.191296"], ["updated_at", "2015-08-23 16:23:27.191296"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.302302"], ["updated_at", "2015-08-23 16:23:27.302302"]]
+  [1m[35m (169.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.480312"], ["updated_at", "2015-08-23 16:23:27.480312"]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.613320"], ["updated_at", "2015-08-23 16:23:27.613320"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.724326"], ["updated_at", "2015-08-23 16:23:27.724326"]]
+  [1m[35m (123.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.858334"], ["updated_at", "2015-08-23 16:23:27.858334"]]
+  [1m[35m (125.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:27.992342"], ["updated_at", "2015-08-23 16:23:27.992342"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.113349"], ["updated_at", "2015-08-23 16:23:28.113349"]]
+  [1m[35m (191.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.313360"], ["updated_at", "2015-08-23 16:23:28.313360"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.425366"], ["updated_at", "2015-08-23 16:23:28.425366"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.545373"], ["updated_at", "2015-08-23 16:23:28.545373"]]
+  [1m[35m (116.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.669380"], ["updated_at", "2015-08-23 16:23:28.669380"]]
+  [1m[35m (156.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.835390"], ["updated_at", "2015-08-23 16:23:28.835390"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:28.948396"], ["updated_at", "2015-08-23 16:23:28.948396"]]
+  [1m[35m (124.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.081404"], ["updated_at", "2015-08-23 16:23:29.081404"]]
+  [1m[35m (103.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.191410"], ["updated_at", "2015-08-23 16:23:29.191410"]]
+  [1m[35m (256.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.458425"], ["updated_at", "2015-08-23 16:23:29.458425"]]
+  [1m[35m (122.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.589433"], ["updated_at", "2015-08-23 16:23:29.589433"]]
+  [1m[35m (137.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.735441"], ["updated_at", "2015-08-23 16:23:29.735441"]]
+  [1m[35m (101.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.847448"], ["updated_at", "2015-08-23 16:23:29.847448"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:29.969455"], ["updated_at", "2015-08-23 16:23:29.969455"]]
+  [1m[35m (112.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:30.089462"], ["updated_at", "2015-08-23 16:23:30.089462"]]
+  [1m[35m (126.0ms)[0m  commit transaction
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:30.224469"], ["updated_at", "2015-08-23 16:23:30.224469"]]
+  [1m[35m (177.0ms)[0m  commit transaction
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" IS NULL LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "contacts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-08-23 16:23:30.413480"], ["updated_at", "2015-08-23 16:23:30.413480"]]
+  [1m[35m (102.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 28050ms (ActiveRecord: 26418.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 139ms (Views: 137.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/scaffolds.self-321ead9e1ad2a1ec1b318c558e94d7e5ede713a2bfc6caf3ddbe025f60f28125.css?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-23 12:23:30 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-23 12:26:07 -0400
+Processing by ContactsController#index as HTML
+  [1m[35mContact Load (1.0ms)[0m  SELECT "contacts".* FROM "contacts"
+  Rendered contacts/index.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 160ms (Views: 157.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/contacts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/scaffolds.self-321ead9e1ad2a1ec1b318c558e94d7e5ede713a2bfc6caf3ddbe025f60f28125.css?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/contacts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-23 12:26:08 -0400
+
+
+Started GET "/contacts/188/edit" for 127.0.0.1 at 2015-08-23 12:26:10 -0400
+Processing by ContactsController#edit as HTML
+  Parameters: {"id"=>"188"}
+  [1m[36mContact Load (0.0ms)[0m  [1mSELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1[0m  [["id", 188]]
+  Rendered contacts/_form.html.erb (200.2ms)
+  Rendered contacts/edit.html.erb within layouts/application (232.2ms)
+Completed 200 OK in 317ms (Views: 314.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/contacts/188" for 127.0.0.1 at 2015-08-23 12:26:19 -0400
+Processing by ContactsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+bJB4qmbOp2q6EbWvml0tvXQ5ZWXwGBkdsqLBMh5QhwWgVmKhsPllGB2e5mThlciiTxIQJsLQvWT7DMO6qdaWA==", "contact"=>{"first_name"=>"Derp", "last_name"=>"Derp ", "email_address"=>"Derp"}, "commit"=>"Update Contact", "id"=>"188"}
+  [1m[35mContact Load (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 188]]
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "contacts" SET "first_name" = ?, "last_name" = ?, "email_address" = ?, "updated_at" = ? WHERE "contacts"."id" = ?  [["first_name", "Derp"], ["last_name", "Derp "], ["email_address", "Derp"], ["updated_at", "2015-08-23 16:26:19.548289"], ["id", 188]]
+  [1m[36m (155.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/contacts/188
+Completed 302 Found in 198ms (ActiveRecord: 157.0ms)
+
+
+Started GET "/contacts/188" for 127.0.0.1 at 2015-08-23 12:26:19 -0400
+Processing by ContactsController#show as HTML
+  Parameters: {"id"=>"188"}
+  [1m[35mContact Load (0.0ms)[0m  SELECT  "contacts".* FROM "contacts" WHERE "contacts"."id" = ? LIMIT 1  [["id", 188]]
+  Rendered contacts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 76ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2015-08-23 12:26:22 -0400
+Processing by ContactsController#index as HTML
+  [1m[36mContact Load (1.0ms)[0m  [1mSELECT "contacts".* FROM "contacts"[0m
+  Rendered contacts/index.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 137ms (Views: 135.2ms | ActiveRecord: 1.0ms)
