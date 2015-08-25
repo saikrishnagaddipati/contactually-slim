@@ -17,7 +17,7 @@ class Contact < ActiveRecord::Base
       # Convert the keys from the csv to match the database column names
       row.keys.each { |k| row[ MAPPING[k] ] = row.delete(k) if MAPPING[k] }
       # Remove company and phone number fields as these aren't in the database:
-      create(row)
+      create row
     end
   end
 
