@@ -4,7 +4,9 @@ class Contact < ActiveRecord::Base
   MAPPING = {
       "First Name" => "first_name",
       "Last Name" => "last_name",
-      "Email Address" => "email_address"
+      "Email Address" => "email_address",
+      "Company Name" => "company_name",
+      "Phone Number" => "phone_number"
   }
 
   def self.import(file)
@@ -15,7 +17,7 @@ class Contact < ActiveRecord::Base
       # Convert the keys from the csv to match the database column names
       row.keys.each { |k| row[ MAPPING[k] ] = row.delete(k) if MAPPING[k] }
       # Remove company and phone number fields as these aren't in the database:
-      create(row.except!('Company Name', 'Phone Number'))
+      create(row)
     end
   end
 
