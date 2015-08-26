@@ -1,5 +1,6 @@
 <div id="main-container" class="container" style="text-align: left">
   <div class="row">
+    < id="content" class="col-xs-6">
     <p id="notice"><%= notice %></p>
 
     <h1 class="text-center">Contacts</h1>
@@ -7,24 +8,12 @@
     <table>
       <thead>
       <tr>
-        <div id="content" class="col-xs-4">
           <th>First name</th>
-        </div>
-        <div id="content" class="col-xs-5">
           <th>Last name</th>
-        </div>
-        <div id="content" class="col-xs-6">
           <th>Email address</th>
-        </div>
-        <div id="content" class="col-xs-7">
           <th>Company Name</th>
-        </div>
-        <div id="content" class="col-xs-8">
           <th>Phone Number</th>
-        </div>
-        <div id="content" class="col-xs-9">
           <th colspan="3"></th>
-        </div>
       </tr>
       </thead>
 
@@ -55,5 +44,4 @@
         <%= submit_tag "Import" %>
     <% end %>
   </div>
-</div>
 </div>
