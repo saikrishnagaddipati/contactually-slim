@@ -11,6 +11,10 @@
  * file per style scope.
  *
  */
-
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
+.centered
+  @include center-block()
+
