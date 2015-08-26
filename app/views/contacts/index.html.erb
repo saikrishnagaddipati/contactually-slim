@@ -36,13 +36,13 @@
     <br>
 
     <%= link_to 'New Contact', new_contact_path %>
-      <div id="content" class="text-center">
+
     <h2>Import Contacts</h2>
     <%= form_tag import_contacts_path, multipart: true do %>
         <%= file_field_tag :file %>
         <%= submit_tag "Import" %>
     <% end %>
-      </div>
+
   </div>
 </div>
 </div>
