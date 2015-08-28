@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+# for testing
+gem 'capybara'
+gem 'factory_girl_rails', '~> 4.0'
+
+group :development, :test do
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
+end
 # to allow bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
@@ -7,8 +16,11 @@ gem 'autoprefixer-rails'
 gem 'tzinfo-data'
 # for converting character sets between diff OS
 gem 'iconv'
+# for excel support
+gem 'roo-xls'
 # use roo for Csv class
 gem 'roo'
+
 
 group :development, :test do
   gem 'sqlite3'

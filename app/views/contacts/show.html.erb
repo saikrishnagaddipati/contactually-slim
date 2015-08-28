@@ -15,5 +15,15 @@
   <%= @contact.email_address %>
 </p>
 
+<p>
+  <strong>Company name:</strong>
+  <%= @contact.company_name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @contact.phone_number %>
+</p>
+
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
